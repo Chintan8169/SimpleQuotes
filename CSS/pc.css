@@ -16,8 +16,9 @@ body {
 }
 
 .outerBox {
+	position: relative;
 	transform-style: preserve-3d;
-	transform: perspective(700px);
+	transform: perspective(500px);
 	width: 65%;
 	height: 83%;
 	background-color: #2196f3;
@@ -51,11 +52,25 @@ body {
 
 .tw {
 	position: absolute;
-	top: 5%;
-	right: 4%;
+	top: 22px;
+	right: 22px;
 	cursor: pointer;
-	color: #2196f3;
+	color: #fff;
 	font-size: 2rem;
+}
+
+.side {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 110px;
+	width: 110px;
+	background: #031323;
+	z-index: -5;
+	transform: translateZ(100px);
+	transform: skewX(45deg) translateX(55px);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5),
+	0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .quote {
@@ -86,14 +101,22 @@ body {
 	width: 65%;
 	height: 8%;
 	display: flex;
-	font-size: 25px;
-	letter-spacing: 2px;
 	border-radius:0 0 5px 5px;
-	font-weight: bold;
 	box-shadow: 0 0 7px black;
 	align-items: center;
 	justify-content: center;
 	background-color: #177cce;
-	color: whitesmoke;
+	transition: 1s;
 }
 
+.newQuote:active {
+	background-color: #177cce23;
+}
+
+.newQuote h4 {
+	font-weight: bold;
+	pointer-events: none;
+	font-size: 25px;
+	letter-spacing: 2px;
+	color: whitesmoke;
+}

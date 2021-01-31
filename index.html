@@ -22,13 +22,14 @@
 			<div class="icons">
 				<i class="dq fas fa-quote-left"></i>
 				<i class="tw fab fa-twitter"></i>
+				<div class="side"></div>
 			</div>
 			<div class="quote">
 				<p id="text"></p>
 				<p id="author"></p>
 			</div>
 		</div>
-		<div class="newQuote">New Quote</div>
+		<div class="newQuote"><h4>New Quote</h4></div>
 	</div>
 </body>
 <script src="JS/index.js"></script>
@@ -38,7 +39,7 @@
 	let screenWidth=screen.availWidth;
 	if(screenWidth >= 1200) {
 		VanillaTilt.init(document.querySelector(".outerBox"), {
-			max: 25,
+			max: 18,
 			speed: 400,
 			glare: true,
 			"max-glare": 0.8,
